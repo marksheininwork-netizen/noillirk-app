@@ -1,0 +1,32 @@
+name: Build unsigned iOS test IPA
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Make temporary placeholder icon
+        run: swift scripts/make-icon.swift Noillirk
+      - name: Generate Xcode project
+        run: xcodegen generate
+      - name: Build device app without signing
+        run: |
+          xcodebuild -project Noillirk.xcodeproj -scheme Noillirk \
+            -configuration Release -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath build/DerivedData \
+            CODE_SIGNING_ALLOWED=NO build
+      - name: Create unsigned test IPA
+        run: |
+          mkdir -p build/export/Payload
+          cp -R "build/DerivedData/Build/Products/Release-iphoneos/Noillirk.app" build/export/Payload/
+          cd build/export
+          zip -qry "Noillirk-UNSIGNED-NOT-FOR-APP-STORE.ipa" Payload
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Noillirk-unsigned-device-IPA
+          path: build/export/Noillirk-UNSIGNED-NOT-FOR-APP-STORE.ipa
