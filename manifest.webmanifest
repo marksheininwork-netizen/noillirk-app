@@ -1,0 +1,19 @@
+{
+  "id": "./",
+  "name": "Noillirk",
+  "short_name": "Noillirk",
+  "description": "Reverse-word puzzle with seven rounds.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f7fc",
+  "theme_color": "#0a9b91",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
