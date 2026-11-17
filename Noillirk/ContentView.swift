@@ -1,52 +1,48 @@
 import SwiftUI
 import WebKit
-
-// Set to a real HTTPS address when the web game is ready.
-private enum Website {
-    static let urlString = ""
-}
+import UIKit
 
 struct ContentView: View {
-    private var websiteURL: URL? {
-        guard let url = URL(string: Website.urlString),
-              url.scheme?.lowercased() == "https",
-              url.host != nil else { return nil }
-        return url
-    }
-
     var body: some View {
-        Group {
-            if let url = websiteURL {
-                GameWebView(url: url)
-                    .ignoresSafeArea(edges: .bottom)
-            } else {
-                VStack(spacing: 16) {
-                    Image(systemName: "gamecontroller.fill")
-                        .font(.system(size: 64))
-                        .foregroundColor(.accentColor)
-                    Text("Noillirk")
-                        .font(.largeTitle.bold())
-                    Text("Coming soon")
-                        .font(.title2)
-                    Text("This is an iOS starter. Game content will be added later.")
-                        .foregroundColor(.secondary)
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal)
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-            }
-        }
+        GameWebView()
+            .ignoresSafeArea(edges: .bottom)
     }
 }
 
 private struct GameWebView: UIViewRepresentable {
-    let url: URL
+    func makeCoordinator() -> Coordinator { Coordinator() }
 
     func makeUIView(context: Context) -> WKWebView {
-        let view = WKWebView(frame: .zero)
-        view.load(URLRequest(url: url))
-        return view
+        let configuration = WKWebViewConfiguration()
+        configuration.websiteDataStore = .default()
+        let webView = WKWebView(frame: .zero, configuration: configuration)
+        webView.navigationDelegate = context.coordinator
+        webView.isOpaque = false
+        webView.backgroundColor = UIColor(red: 0.965, green: 0.969, blue: 0.988, alpha: 1)
+        webView.scrollView.contentInsetAdjustmentBehavior = .never
+
+        if let webRoot = Bundle.main.resourceURL?.appendingPathComponent("Web", isDirectory: true),
+           let entry = Bundle.main.url(forResource: "index", withExtension: "html", subdirectory: "Web") {
+            webView.loadFileURL(entry, allowingReadAccessTo: webRoot)
+        } else {
+            webView.loadHTMLString("<main style='font:17px -apple-system;padding:32px'><h1>Noillirk</h1><p>The game files could not be loaded. Please reinstall the app.</p></main>", baseURL: nil)
+        }
+        return webView
     }
 
-    func updateUIView(_ view: WKWebView, context: Context) {}
+    func updateUIView(_ webView: WKWebView, context: Context) {}
+
+    final class Coordinator: NSObject, WKNavigationDelegate {
+        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction,
+                     decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+            if navigationAction.request.url?.scheme == "mailto" {
+                if let url = navigationAction.request.url {
+                    UIApplication.shared.open(url)
+                }
+                decisionHandler(.cancel)
+            } else {
+                decisionHandler(.allow)
+            }
+        }
+    }
 }
