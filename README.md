@@ -1,20 +1,17 @@
-# Noillirk iOS Web Wrapper Starter
+# Noillirk iOS app
 
-Minimal SwiftUI + WKWebView iOS project for the existing App Store Connect Noillirk record.
+This XcodeGen project packages the playable Noillirk PWA in the app bundle. The game and its support, terms, and privacy pages are available offline after installation.
 
-- App Store Connect bundle ID: `com.mariasheinin.noillirk`
-- Content: deliberately absent as requested; native "Coming soon" placeholder
-- Website URL: intentionally empty until a real HTTPS game is available
-- Deployment: iOS 16.0+; marketing version 1.0.0 (build 1)
+## Build locally
 
-## Build on a Mac
-1. Install Xcode and XcodeGen (`brew install xcodegen`).
-2. Run `swift scripts/make-icon.swift Noillirk` to generate the placeholder icon.
-3. Run `xcodegen generate` and open `Noillirk.xcodeproj`.
-4. Choose the matching Apple Developer team in Signing & Capabilities.
-5. After building, test the app and add the real game and HTTPS URL to `Noillirk/ContentView.swift`.
-6. To create an **App Store-uploadable** IPA, archive in Xcode and export using an Apple distribution signing identity and provisioning profile for `com.mariasheinin.noillirk`.
+Requirements: macOS, Xcode, and XcodeGen.
 
-The GitHub Actions workflow runs only on manual dispatch and produces a clearly marked **UNSIGNED test IPA**, not an App Store uploadable file. It uses a GitHub macOS runner; charges or minutes may apply depending on account plan and repository visibility.
+1. Run `swift scripts/make-icon.swift Noillirk`.
+2. Run `xcodegen generate`.
+3. Open `Noillirk.xcodeproj` in Xcode.
+4. Select the Apple Developer team for signing. Keep the existing bundle ID `com.mariasheinin.noillirk`.
+5. Run on a simulator or a registered device, then create an archive for App Store Connect.
 
-**Not ready for App Review:** A placeholder without meaningful functionality may be rejected under Apple's minimum functionality rules. Full game content, privacy declarations, metadata, accessibility checks and valid signing are required first.
+The GitHub Actions workflow is manually triggered and makes an **unsigned test IPA**. It is useful for inspecting build output but cannot be installed or uploaded to App Store Connect as a production build.
+
+The App Store metadata copy and open questions are in `APP-STORE-DRAFT.md`. The listing has not been submitted.
