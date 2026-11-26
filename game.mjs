@@ -1,0 +1,74 @@
+export const QUESTIONS = [
+{category:"Geography",q:"Which city is the capital of Japan?",a:["Seoul","Tokyo","Kyoto","Osaka"],correct:1,why:"Tokyo is Japan's capital and largest metropolitan area."},
+{category:"Geography",q:"Which river flows through Egypt?",a:["Danube","Nile","Rhine","Amazon"],correct:1,why:"The Nile flows north through Egypt to the Mediterranean."},
+{category:"Geography",q:"Which is the world's largest ocean?",a:["Atlantic","Indian","Pacific","Arctic"],correct:2,why:"The Pacific is the largest and deepest ocean."},
+{category:"Geography",q:"Lisbon is the capital of which country?",a:["Spain","Portugal","Italy","Greece"],correct:1,why:"Lisbon is Portugal's capital, on the Atlantic coast."},
+{category:"Geography",q:"Mount Everest is part of which mountain range?",a:["Andes","Alps","Himalayas","Rockies"],correct:2,why:"Everest lies in the Himalayas on the Nepal–China border."},
+{category:"Geography",q:"Which city is famously located in both Europe and Asia?",a:["Cairo","Istanbul","Marrakesh","Reykjavik"],correct:1,why:"Istanbul spans the Bosporus, with districts on both continents."},
+{category:"Geography",q:"Which country is home to the ancient city of Petra?",a:["Jordan","Lebanon","Oman","Cyprus"],correct:0,why:"Petra is an archaeological city in southern Jordan."},
+{category:"Language",q:"What does “concise” mean?",a:["Brief but clear","Loud and forceful","Uncertain","Highly technical"],correct:0,why:"Concise writing expresses an idea clearly in few words."},
+{category:"Language",q:"Which word is closest in meaning to “reluctant”?",a:["Eager","Unwilling","Careless","Certain"],correct:1,why:"Reluctant means hesitant or unwilling to do something."},
+{category:"Language",q:"What is an antonym of “scarce”?",a:["Rare","Limited","Abundant","Costly"],correct:2,why:"Abundant means available in large quantities."},
+{category:"Language",q:"Which sentence uses “their” correctly?",a:["Their going to the park.","The team packed their bags.","Put it over their.","Their is a nice day."],correct:1,why:"Their shows possession: the bags belong to the team."},
+{category:"Language",q:"What does “ambiguous” describe?",a:["Having more than one possible meaning","Easy to measure","Extremely loud","Already completed"],correct:0,why:"Ambiguous language can be understood in more than one way."},
+{category:"Language",q:"Which word means to make something less severe?",a:["Mitigate","Magnify","Dismiss","Predict"],correct:0,why:"To mitigate is to reduce the severity or impact of something."},
+{category:"Language",q:"What is a “caveat”?",a:["A warning or qualification","A celebration","A short poem","A final result"],correct:0,why:"A caveat is a caution or condition attached to a statement."},
+{category:"History",q:"The Magna Carta was sealed in which year?",a:["1066","1215","1492","1776"],correct:1,why:"King John sealed the Magna Carta in 1215."},
+{category:"History",q:"Who was the first president of the United States?",a:["John Adams","Thomas Jefferson","George Washington","James Madison"],correct:2,why:"George Washington served as the first U.S. president."},
+{category:"History",q:"Which ancient civilization built Machu Picchu?",a:["Maya","Inca","Aztec","Roman"],correct:1,why:"Machu Picchu was built by the Inca in the Andes."},
+{category:"History",q:"The Renaissance began in which present-day country?",a:["France","Italy","Germany","England"],correct:1,why:"The Renaissance began in Italian city-states before spreading across Europe."},
+{category:"History",q:"Which ship famously sank on its maiden voyage in 1912?",a:["Lusitania","Titanic","Endeavour","Mayflower"],correct:1,why:"The Titanic struck an iceberg and sank in April 1912."},
+{category:"History",q:"Who was the first woman to fly solo across the Atlantic?",a:["Bessie Coleman","Amelia Earhart","Harriet Quimby","Valentina Tereshkova"],correct:1,why:"Amelia Earhart completed the solo Atlantic flight in 1932."},
+{category:"History",q:"The ancient city of Pompeii was buried by which volcano?",a:["Etna","Vesuvius","Stromboli","Krakatoa"],correct:1,why:"Mount Vesuvius erupted in 79 CE and buried Pompeii."},
+{category:"Science",q:"Which planet is often called the Red Planet?",a:["Venus","Mars","Jupiter","Mercury"],correct:1,why:"Iron-rich dust gives Mars its reddish appearance."},
+{category:"Science",q:"What process lets plants use sunlight to make sugars?",a:["Fermentation","Photosynthesis","Evaporation","Condensation"],correct:1,why:"Photosynthesis converts light energy into chemical energy in plants."},
+{category:"Science",q:"Which organ pumps blood through the human body?",a:["Lungs","Liver","Heart","Kidneys"],correct:2,why:"The heart pumps blood through the circulatory system."},
+{category:"Science",q:"What is the chemical symbol for water?",a:["CO₂","O₂","H₂O","NaCl"],correct:2,why:"A water molecule contains hydrogen and oxygen, written H₂O."},
+{category:"Science",q:"Which part of a cell contains most of its genetic material?",a:["Nucleus","Cell wall","Ribosome","Vacuole"],correct:0,why:"In most cells, DNA is primarily stored in the nucleus."},
+{category:"Science",q:"What force pulls objects toward Earth?",a:["Magnetism","Gravity","Friction","Buoyancy"],correct:1,why:"Earth's gravitational attraction pulls objects toward its center."},
+{category:"Science",q:"Which state of matter has a fixed volume but no fixed shape?",a:["Solid","Liquid","Gas","Plasma"],correct:1,why:"A liquid keeps its volume but takes the shape of its container."},
+{category:"Nature",q:"What is the largest animal known to have lived on Earth?",a:["African elephant","Blue whale","Giraffe","Whale shark"],correct:1,why:"The blue whale is the largest known animal."},
+{category:"Nature",q:"What do bees collect from flowers to make honey?",a:["Nectar","Sap","Dew","Pollen only"],correct:0,why:"Honey bees turn flower nectar into honey; pollen is mainly a protein source."},
+{category:"Nature",q:"Which tree produces acorns?",a:["Maple","Oak","Birch","Willow"],correct:1,why:"Acorns are the nuts produced by oak trees."},
+{category:"Nature",q:"A group of lions is commonly called what?",a:["A pack","A pride","A herd","A colony"],correct:1,why:"A group of lions is called a pride."},
+{category:"Nature",q:"Which animal is known for changing color to blend into its surroundings?",a:["Chameleon","Meerkat","Otter","Puffin"],correct:0,why:"Some chameleons change color for communication and camouflage."},
+{category:"Nature",q:"What is the name for a young frog before it develops legs?",a:["Larva","Tadpole","Fry","Nymph"],correct:1,why:"A frog begins life as an aquatic tadpole."},
+{category:"Nature",q:"Which biome is characterized by permafrost and very short summers?",a:["Savanna","Tundra","Rainforest","Temperate forest"],correct:1,why:"Tundra regions have permanently frozen subsoil and short growing seasons."},
+{category:"Arts & Books",q:"Who wrote the novel “Pride and Prejudice”?",a:["Charlotte Brontë","Jane Austen","Mary Shelley","George Eliot"],correct:1,why:"Jane Austen published Pride and Prejudice in 1813."},
+{category:"Arts & Books",q:"Which artist painted “The Starry Night”?",a:["Claude Monet","Vincent van Gogh","Pablo Picasso","Salvador Dalí"],correct:1,why:"Vincent van Gogh painted The Starry Night in 1889."},
+{category:"Arts & Books",q:"What is the name of Sherlock Holmes's close friend and chronicler?",a:["Inspector Lestrade","Dr. Watson","Professor Moriarty","Mycroft Holmes"],correct:1,why:"Dr. John Watson narrates many Sherlock Holmes stories."},
+{category:"Arts & Books",q:"Which instrument has black and white keys and is played with both hands?",a:["Harp","Piano","Trumpet","Cello"],correct:1,why:"A piano has a keyboard of keys played by the hands."},
+{category:"Arts & Books",q:"In Greek mythology, who is the goddess of wisdom?",a:["Aphrodite","Athena","Hera","Demeter"],correct:1,why:"Athena is associated with wisdom, strategy, and crafts."},
+{category:"Arts & Books",q:"Which play features the characters Romeo and Juliet?",a:["Hamlet","Macbeth","Romeo and Juliet","Othello"],correct:2,why:"Romeo and Juliet is Shakespeare's tragedy about two young lovers."},
+{category:"Arts & Books",q:"What is a sculpture made by carving often called?",a:["Relief","Bust","Carving","Mosaic"],correct:2,why:"Carving shapes a material by cutting away parts of it."},
+{category:"Technology",q:"What does “URL” identify?",a:["A web address","A computer chip","A file format","A wireless network"],correct:0,why:"A URL is the address used to locate a resource on the web."},
+{category:"Technology",q:"Which company created the Python programming language?",a:["Python Software Foundation","It was created by Guido van Rossum","Bell Labs","Xerox PARC"],correct:1,why:"Guido van Rossum created Python and first released it in 1991."},
+{category:"Technology",q:"What is a QR code mainly used for?",a:["Storing scannable information","Cooling a processor","Charging a battery","Measuring sound"],correct:0,why:"A camera can scan a QR code to open or read encoded information."},
+{category:"Technology",q:"Which device routes data between networks?",a:["Router","Keyboard","Monitor","Microphone"],correct:0,why:"A router forwards data between different networks."},
+{category:"Technology",q:"What does “open source” software generally mean?",a:["Its source code is available under a license","It works only online","It has no user interface","It cannot be changed"],correct:0,why:"Open-source licenses allow people to inspect, use, or modify the code under stated terms."},
+{category:"Technology",q:"Which company developed the Android operating system?",a:["Google","Nintendo","Adobe","Nokia"],correct:0,why:"Android is developed by Google and the Open Handset Alliance."},
+{category:"Technology",q:"What is the main job of a web browser?",a:["Display and interact with websites","Store electricity","Create computer hardware","Print documents automatically"],correct:0,why:"A web browser requests, displays, and lets people interact with web pages."}
+];
+export const CATEGORIES = ["All", ...new Set(QUESTIONS.map(q => q.category))];
+export function chooseRound(category="All", random=Math.random) {
+ const pool=category==="All" ? QUESTIONS : QUESTIONS.filter(q=>q.category===category);
+ const items=[...pool];
+ for(let i=items.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[items[i],items[j]]=[items[j],items[i]]}
+ return items.slice(0,7);
+}
+const STORAGE="noillirk-trivia-v2";
+function fresh(){return{name:"",games:0,best:0,bestByCategory:{}}}
+function load(){try{return {...fresh(),...JSON.parse(localStorage.getItem(STORAGE)||"{}")}}catch{return fresh()}}
+let profile=typeof localStorage!=="undefined"?load():fresh();
+const $=id=>document.getElementById(id);
+let round=[],index=0,score=0,locked=false,timerId=null,remaining=20,selectedCategory="All";
+function persist(){try{localStorage.setItem(STORAGE,JSON.stringify(profile))}catch{}}
+function screen(name){clearInterval(timerId);document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("active",s.id===name));document.querySelectorAll(".nav button").forEach(b=>{if(b.dataset.screen===name)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current")});window.scrollTo(0,0)}
+function refreshStats(){ $("bestBadge").textContent="Best "+profile.best+" / 7";$("bestHome").textContent=profile.best+" / 7";$("bestStats").textContent=profile.best+" / 7";$("gamesHome").textContent=String(profile.games);$("gamesStats").textContent=String(profile.games);$("welcome").textContent=profile.name?"Good luck, "+profile.name+".":"";const rows=Object.entries(profile.bestByCategory||{}).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]);$("categoryStats").innerHTML=rows.length?rows.map(([name,value])=>'<p><strong>'+escapeHTML(name)+'</strong> — '+value+' / 7</p>').join(""):"Play a round to start your records."}
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function draw(){locked=false;remaining=20;const q=round[index];$("roundLabel").textContent="Question "+(index+1)+" of 7";$("questionCategory").textContent=q.category;$("progress").style.width=(index/7*100)+"%";$("question").textContent=q.q;$("timer").textContent="20s";$("timer").classList.remove("low");$("feedback").textContent="";$("next").hidden=true;const box=$("answers");box.replaceChildren();q.a.forEach((label,n)=>{const b=document.createElement("button");b.className="answer";b.textContent=label;b.addEventListener("click",()=>answer(n));box.append(b)});timerId=setInterval(()=>{remaining--;const t=$("timer");t.textContent=remaining+"s";t.classList.toggle("low",remaining<=5);if(remaining<=0)answer(-1)},1000)}
+function start(){selectedCategory=$("category").value||"All";round=chooseRound(selectedCategory);if(round.length<7){$("feedback").textContent="Not enough questions in this category yet.";return}index=0;score=0;screen("game");draw()}
+function answer(choice){if(locked)return;locked=true;clearInterval(timerId);const q=round[index],correct=choice===q.correct;if(correct)score++;[...$("answers").children].forEach((b,n)=>{b.disabled=true;if(n===q.correct)b.classList.add("correct");else if(n===choice)b.classList.add("wrong")});$("feedback").textContent=(correct?"Correct. ":"The answer is "+q.a[q.correct]+". ")+q.why;$("next").hidden=false;$("next").focus()}
+function advance(){if(!locked)return;if(index<6){index++;draw()}else finish()}
+function finish(){clearInterval(timerId);profile.games++;profile.best=Math.max(profile.best,score);profile.bestByCategory[selectedCategory]=Math.max(profile.bestByCategory[selectedCategory]||0,score);persist();refreshStats();$("progress").style.width="100%";$("finalScore").textContent=score+" / 7";$("resultMessage").textContent=score===7?"Perfect round.":score>=5?"Strong round. Try another category.":"Good practice. Every round is a fresh start.";screen("result")}
+document.addEventListener("DOMContentLoaded",()=>{const select=$("category");CATEGORIES.forEach(c=>{const o=document.createElement("option");o.value=c;o.textContent=c;select.append(o)});refreshStats();$("startGame").addEventListener("click",start);$("again").addEventListener("click",start);$("next").addEventListener("click",advance);document.querySelectorAll("[data-screen]").forEach(b=>b.addEventListener("click",()=>screen(b.dataset.screen)));$("profileForm").addEventListener("submit",e=>{e.preventDefault();profile.name=$("nickname").value.trim();persist();refreshStats();$("profileSaved").textContent="Profile saved on this device.";});$("nickname").value=profile.name;});
