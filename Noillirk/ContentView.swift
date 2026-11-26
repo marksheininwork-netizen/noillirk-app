@@ -3,7 +3,7 @@ import WebKit
 
 // Set to a real HTTPS address when the web game is ready.
 private enum Website {
-    static let urlString = ""
+    static let urlString = "https://marksheininwork-netizen.github.io/noillirk-app/"
 }
 
 struct ContentView: View {
