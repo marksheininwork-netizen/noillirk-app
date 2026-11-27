@@ -22,7 +22,7 @@ button,input,select{font:inherit}button{cursor:pointer;color:inherit}.shell{widt
 </section>
 <section class="screen" id="game" aria-labelledby="question">
 <div class="game-head"><strong id="roundLabel">Question 1 of 7</strong><span class="timer" id="timer" aria-live="polite">20s</span></div>
-<div class="bar" aria-label="Round progress"><span id="progress"></span></div><p class="small muted" id="questionCategory"></p><h2 class="question" id="question"></h2>
+<div class="bar" aria-label="Round progress"><span id="progress"></span></div><p class="small muted" id="questionCategory"></p><h2 class="question" id="question" tabindex="-1"></h2>
 <div class="answers" id="answers"></div><p class="feedback" id="feedback" aria-live="polite"></p><button class="btn primary" id="next" hidden>Next question</button>
 </section>
 <section class="screen" id="result" aria-labelledby="resultTitle"><div class="card"><div class="eyebrow">Round complete</div><h1 id="resultTitle">Your score</h1><div class="stat" id="finalScore">0 / 7</div><p class="muted" id="resultMessage"></p><div class="row"><button class="btn primary" id="again">Play again</button><button class="btn" data-screen="home">Choose another category</button></div></div></section>
